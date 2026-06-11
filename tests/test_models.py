@@ -175,3 +175,23 @@ class TestAccount(unittest.TestCase):
         """It should not Deserialize an account with a TypeError"""
         account = Account()
         self.assertRaises(DataValidationError, account.deserialize, [])
+
+    def test_account_repr(self):
+        """It should return a string representation of an Account"""
+        account = AccountFactory()
+        self.assertIn(account.name, repr(account))
+
+
+    # def test_update_account_without_id(self):
+    #     """It should not Update an Account without an id"""
+    #     account = AccountFactory()
+    #     account.id = None
+    #     self.assertRaises(DataValidationError, account.update)
+
+    # def test_find_account_by_email(self):
+    #     """It should Find an Account by email"""
+    #     accounts = self._create_accounts(5)
+    #     test_email = accounts[0].email
+    #     account = Account.find_by_email(test_email)
+    #     self.assertIsNotNone(account)
+    #     self.assertEqual(account.email, test_email)
