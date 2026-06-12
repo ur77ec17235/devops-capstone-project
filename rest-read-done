@@ -1,0 +1,21 @@
+curl -i -X GET http://127.0.0.1:5000/accounts/1
+
+HTTP/1.1 302 FOUND
+Server: gunicorn
+Date: Fri, 12 Jun 2026 06:28:48 GMT
+Connection: close
+Content-Type: text/html; charset=utf-8
+Content-Length: 253
+Location: https://127.0.0.1:5000/accounts/1
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+
+<!doctype html>
+<html lang=en>
+<title>Redirecting...</title>
+<h1>Redirecting...</h1>
+<p>You should be redirected automatically to the target URL: <a href="https://127.0.0.1:5000/accounts/1">https://127.0.0.1:5000/accounts/1</a>. If not, click the link.

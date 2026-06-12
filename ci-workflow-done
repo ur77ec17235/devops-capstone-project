@@ -1,0 +1,552 @@
+GitHub Actions CI Build successful run
+Repository: https://github.com/ur77ec17235/devops-capstone-project
+Workflow: CI Build
+Run ID: 27372209254
+
+
+✓ main CI Build · 27372209254
+Triggered via push about 20 hours ago
+
+JOBS
+✓ build in 39s (ID 80887133584)
+  ✓ Set up job
+  ✓ Initialize containers
+  ✓ Checkout
+  ✓ Install dependencies
+  ✓ Lint with flake8
+  ✓ Run unit tests with nose
+  ✓ Post Checkout
+  ✓ Stop containers
+  ✓ Complete job
+
+ANNOTATIONS
+! Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v2. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build: .github#2
+
+
+For more information about the job, try: gh run view --job=80887133584
+View this run on GitHub: https://github.com/ur77ec17235/devops-capstone-project/actions/runs/27372209254
+
+================ FULL LOGS ================
+build	UNKNOWN STEP	﻿2026-06-11T19:30:58.6626592Z Current runner version: '2.334.0'
+build	UNKNOWN STEP	2026-06-11T19:30:58.6654588Z ##[group]Runner Image Provisioner
+build	UNKNOWN STEP	2026-06-11T19:30:58.6655695Z Hosted Compute Agent
+build	UNKNOWN STEP	2026-06-11T19:30:58.6656354Z Version: 20260527.539
+build	UNKNOWN STEP	2026-06-11T19:30:58.6656998Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+build	UNKNOWN STEP	2026-06-11T19:30:58.6657827Z Build Date: 2026-05-27T21:39:57Z
+build	UNKNOWN STEP	2026-06-11T19:30:58.6658542Z Worker ID: {6e2e936e-0542-4149-89c3-a61b52c81715}
+build	UNKNOWN STEP	2026-06-11T19:30:58.6659332Z Azure Region: eastus
+build	UNKNOWN STEP	2026-06-11T19:30:58.6659940Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:58.6661913Z ##[group]Operating System
+build	UNKNOWN STEP	2026-06-11T19:30:58.6662812Z Ubuntu
+build	UNKNOWN STEP	2026-06-11T19:30:58.6663370Z 24.04.4
+build	UNKNOWN STEP	2026-06-11T19:30:58.6663880Z LTS
+build	UNKNOWN STEP	2026-06-11T19:30:58.6664531Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:58.6665132Z ##[group]Runner Image
+build	UNKNOWN STEP	2026-06-11T19:30:58.6666310Z Image: ubuntu-24.04
+build	UNKNOWN STEP	2026-06-11T19:30:58.6666918Z Version: 20260607.184.1
+build	UNKNOWN STEP	2026-06-11T19:30:58.6668279Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260607.184/images/ubuntu/Ubuntu2404-Readme.md
+build	UNKNOWN STEP	2026-06-11T19:30:58.6669880Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260607.184
+build	UNKNOWN STEP	2026-06-11T19:30:58.6670902Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:58.6672540Z ##[group]GITHUB_TOKEN Permissions
+build	UNKNOWN STEP	2026-06-11T19:30:58.6674977Z Contents: read
+build	UNKNOWN STEP	2026-06-11T19:30:58.6675607Z Metadata: read
+build	UNKNOWN STEP	2026-06-11T19:30:58.6676206Z Packages: read
+build	UNKNOWN STEP	2026-06-11T19:30:58.6676863Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:58.6679107Z Secret source: Actions
+build	UNKNOWN STEP	2026-06-11T19:30:58.6680149Z Prepare workflow directory
+build	UNKNOWN STEP	2026-06-11T19:30:58.7120914Z Prepare all required actions
+build	UNKNOWN STEP	2026-06-11T19:30:58.7159237Z Getting action download info
+build	UNKNOWN STEP	2026-06-11T19:30:58.9928012Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+build	UNKNOWN STEP	2026-06-11T19:30:59.2835717Z Complete job name: build
+build	UNKNOWN STEP	2026-06-11T19:30:59.3323010Z ##[group]Checking docker version
+build	UNKNOWN STEP	2026-06-11T19:30:59.3336161Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+build	UNKNOWN STEP	2026-06-11T19:30:59.3965671Z '1.48'
+build	UNKNOWN STEP	2026-06-11T19:30:59.3982887Z Docker daemon API version: '1.48'
+build	UNKNOWN STEP	2026-06-11T19:30:59.3983719Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+build	UNKNOWN STEP	2026-06-11T19:30:59.4154461Z '1.48'
+build	UNKNOWN STEP	2026-06-11T19:30:59.4165507Z Docker client API version: '1.48'
+build	UNKNOWN STEP	2026-06-11T19:30:59.4171857Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:59.4174429Z ##[group]Clean up resources from previous jobs
+build	UNKNOWN STEP	2026-06-11T19:30:59.4180194Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=b10812"
+build	UNKNOWN STEP	2026-06-11T19:30:59.4335679Z ##[command]/usr/bin/docker network prune --force --filter "label=b10812"
+build	UNKNOWN STEP	2026-06-11T19:30:59.4474740Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:59.4475292Z ##[group]Create local container network
+build	UNKNOWN STEP	2026-06-11T19:30:59.4485897Z ##[command]/usr/bin/docker network create --label b10812 github_network_fc1542ada98340acb8e87c45897615a9
+build	UNKNOWN STEP	2026-06-11T19:30:59.5027666Z 2c3b02c514507b3b0b7ae02a0c4c127bbc9dc3e44b7291c33b452013d1c3c11f
+build	UNKNOWN STEP	2026-06-11T19:30:59.5045024Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:30:59.5069201Z ##[group]Starting job container
+build	UNKNOWN STEP	2026-06-11T19:30:59.5090692Z ##[command]/usr/bin/docker pull python:3.9-slim
+build	UNKNOWN STEP	2026-06-11T19:30:59.8129377Z 3.9-slim: Pulling from library/python
+build	UNKNOWN STEP	2026-06-11T19:30:59.8914725Z 38513bd72563: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:30:59.8915723Z b3ec39b36ae8: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:30:59.8916539Z fc7443084902: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:30:59.8917292Z ea56f685404a: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:30:59.8918031Z ea56f685404a: Waiting
+build	UNKNOWN STEP	2026-06-11T19:30:59.9304521Z b3ec39b36ae8: Download complete
+build	UNKNOWN STEP	2026-06-11T19:30:59.9598611Z ea56f685404a: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:30:59.9600150Z ea56f685404a: Download complete
+build	UNKNOWN STEP	2026-06-11T19:30:59.9738373Z fc7443084902: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:30:59.9742150Z fc7443084902: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:00.0306062Z 38513bd72563: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:00.0307093Z 38513bd72563: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:00.9689589Z 38513bd72563: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:01.7033884Z b3ec39b36ae8: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:02.4164059Z fc7443084902: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:02.4298584Z ea56f685404a: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:02.4343031Z Digest: sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+build	UNKNOWN STEP	2026-06-11T19:31:02.4354852Z Status: Downloaded newer image for python:3.9-slim
+build	UNKNOWN STEP	2026-06-11T19:31:02.4372526Z docker.io/library/python:3.9-slim
+build	UNKNOWN STEP	2026-06-11T19:31:02.4463243Z ##[command]/usr/bin/docker create --name 73dc270d3e7f4a4e8aa7a937f829a537_python39slim_1f4351 --label b10812 --workdir /__w/devops-capstone-project/devops-capstone-project --network github_network_fc1542ada98340acb8e87c45897615a9  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.334.0/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" python:3.9-slim "-f" "/dev/null"
+build	UNKNOWN STEP	2026-06-11T19:31:02.4726951Z 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:02.4752130Z ##[command]/usr/bin/docker start 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:02.6565661Z 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:02.6583954Z ##[command]/usr/bin/docker ps --all --filter id=34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+build	UNKNOWN STEP	2026-06-11T19:31:02.6710618Z 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657 Up Less than a second
+build	UNKNOWN STEP	2026-06-11T19:31:02.6732959Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:02.6858740Z HOME=/github/home
+build	UNKNOWN STEP	2026-06-11T19:31:02.6859585Z GITHUB_ACTIONS=true
+build	UNKNOWN STEP	2026-06-11T19:31:02.6860041Z CI=true
+build	UNKNOWN STEP	2026-06-11T19:31:02.6860640Z PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+build	UNKNOWN STEP	2026-06-11T19:31:02.6861588Z LANG=C.UTF-8
+build	UNKNOWN STEP	2026-06-11T19:31:02.6862059Z GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568
+build	UNKNOWN STEP	2026-06-11T19:31:02.6862563Z PYTHON_VERSION=3.9.25
+build	UNKNOWN STEP	2026-06-11T19:31:02.6863188Z PYTHON_SHA256=00e07d7c0f2f0cc002432d1ee84d2a40dae404a99303e3f97701c10966c91834
+build	UNKNOWN STEP	2026-06-11T19:31:02.6878419Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:02.6879985Z ##[group]Starting postgres service container
+build	UNKNOWN STEP	2026-06-11T19:31:02.6881565Z ##[command]/usr/bin/docker pull postgres:alpine
+build	UNKNOWN STEP	2026-06-11T19:31:02.9273370Z alpine: Pulling from library/postgres
+build	UNKNOWN STEP	2026-06-11T19:31:03.1555087Z 6a0ac1617861: Already exists
+build	UNKNOWN STEP	2026-06-11T19:31:03.1569397Z 6797fe14fc37: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1569964Z cb0e827e8389: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1570535Z 3771f4eeb917: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1571389Z 4e227c0c29b0: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1571868Z cb2ae37abf29: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1572445Z 033acd588901: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1572980Z 56e975b78d08: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1573448Z 05f6e8830d21: Pulling fs layer
+build	UNKNOWN STEP	2026-06-11T19:31:03.1573911Z cb2ae37abf29: Waiting
+build	UNKNOWN STEP	2026-06-11T19:31:03.1574374Z 033acd588901: Waiting
+build	UNKNOWN STEP	2026-06-11T19:31:03.1574773Z 56e975b78d08: Waiting
+build	UNKNOWN STEP	2026-06-11T19:31:03.1575164Z 05f6e8830d21: Waiting
+build	UNKNOWN STEP	2026-06-11T19:31:03.1575605Z 4e227c0c29b0: Waiting
+build	UNKNOWN STEP	2026-06-11T19:31:03.1834707Z 6797fe14fc37: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.1840545Z 6797fe14fc37: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.1879199Z 3771f4eeb917: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.1883913Z 3771f4eeb917: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.1995817Z cb0e827e8389: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.1996978Z cb0e827e8389: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2027588Z 6797fe14fc37: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2214700Z cb2ae37abf29: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.2217744Z cb2ae37abf29: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2284808Z 033acd588901: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.2293099Z 033acd588901: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2439069Z cb0e827e8389: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2491950Z 56e975b78d08: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.2497449Z 56e975b78d08: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2580728Z 05f6e8830d21: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.2582465Z 05f6e8830d21: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.2588336Z 3771f4eeb917: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:03.5560012Z 4e227c0c29b0: Verifying Checksum
+build	UNKNOWN STEP	2026-06-11T19:31:03.5560651Z 4e227c0c29b0: Download complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0118915Z 4e227c0c29b0: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0263271Z cb2ae37abf29: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0353016Z 033acd588901: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0443869Z 56e975b78d08: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0532260Z 05f6e8830d21: Pull complete
+build	UNKNOWN STEP	2026-06-11T19:31:06.0567628Z Digest: sha256:96d56f7f57c6aacd1fcb908bc83b345ec5f83231ee486dd66a1baadce274db88
+build	UNKNOWN STEP	2026-06-11T19:31:06.0578813Z Status: Downloaded newer image for postgres:alpine
+build	UNKNOWN STEP	2026-06-11T19:31:06.0587560Z docker.io/library/postgres:alpine
+build	UNKNOWN STEP	2026-06-11T19:31:06.0605914Z ##[command]/usr/bin/docker create --name 41e8bcaecdea44e9a8e14d9781e249b5_postgresalpine_491e26 --label b10812 --network github_network_fc1542ada98340acb8e87c45897615a9 --network-alias postgres -p 5432:5432 --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5 -e "POSTGRES_PASSWORD=pgs3cr3t" -e "POSTGRES_DB=testdb" -e GITHUB_ACTIONS=true -e CI=true postgres:alpine
+build	UNKNOWN STEP	2026-06-11T19:31:06.0868156Z 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:06.0882310Z ##[command]/usr/bin/docker start 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:06.2491637Z 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:06.2529316Z ##[command]/usr/bin/docker ps --all --filter id=42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+build	UNKNOWN STEP	2026-06-11T19:31:06.2704074Z 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e Up Less than a second (health: starting)
+build	UNKNOWN STEP	2026-06-11T19:31:06.2726520Z ##[command]/usr/bin/docker port 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:06.2871811Z 5432/tcp -> 0.0.0.0:5432
+build	UNKNOWN STEP	2026-06-11T19:31:06.2872299Z 5432/tcp -> [::]:5432
+build	UNKNOWN STEP	2026-06-11T19:31:06.2929405Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:06.2939411Z ##[group]Waiting for all services to be ready
+build	UNKNOWN STEP	2026-06-11T19:31:06.2949141Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:06.3095822Z starting
+build	UNKNOWN STEP	2026-06-11T19:31:06.3116110Z postgres service is starting, waiting 2 seconds before checking again.
+build	UNKNOWN STEP	2026-06-11T19:31:08.3117877Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:08.3249734Z starting
+build	UNKNOWN STEP	2026-06-11T19:31:08.3264379Z postgres service is starting, waiting 4 seconds before checking again.
+build	UNKNOWN STEP	2026-06-11T19:31:12.4047987Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:12.4177976Z starting
+build	UNKNOWN STEP	2026-06-11T19:31:12.4192771Z postgres service is starting, waiting 6 seconds before checking again.
+build	UNKNOWN STEP	2026-06-11T19:31:19.3088339Z ##[command]/usr/bin/docker inspect --format="{{if .Config.Healthcheck}}{{print .State.Health.Status}}{{end}}" 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:19.3220505Z healthy
+build	UNKNOWN STEP	2026-06-11T19:31:19.3238045Z postgres service is healthy.
+build	UNKNOWN STEP	2026-06-11T19:31:19.3238902Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:19.3492131Z ##[group]Run actions/checkout@v2
+build	UNKNOWN STEP	2026-06-11T19:31:19.3492684Z with:
+build	UNKNOWN STEP	2026-06-11T19:31:19.3492956Z   repository: ur77ec17235/devops-capstone-project
+build	UNKNOWN STEP	2026-06-11T19:31:19.3495989Z   token: ***
+build	UNKNOWN STEP	2026-06-11T19:31:19.3496212Z   ssh-strict: true
+build	UNKNOWN STEP	2026-06-11T19:31:19.3496693Z   persist-credentials: true
+build	UNKNOWN STEP	2026-06-11T19:31:19.3496939Z   clean: true
+build	UNKNOWN STEP	2026-06-11T19:31:19.3497139Z   fetch-depth: 1
+build	UNKNOWN STEP	2026-06-11T19:31:19.3497341Z   lfs: false
+build	UNKNOWN STEP	2026-06-11T19:31:19.3497534Z   submodules: false
+build	UNKNOWN STEP	2026-06-11T19:31:19.3497749Z   set-safe-directory: true
+build	UNKNOWN STEP	2026-06-11T19:31:19.3498158Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:19.3559154Z ##[command]/usr/bin/docker exec  34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657 sh -c "cat /etc/*release | grep ^ID"
+build	UNKNOWN STEP	2026-06-11T19:31:19.5838801Z Syncing repository: ur77ec17235/devops-capstone-project
+build	UNKNOWN STEP	2026-06-11T19:31:19.5840291Z ##[group]Getting Git version info
+build	UNKNOWN STEP	2026-06-11T19:31:19.5840749Z Working directory is '/__w/devops-capstone-project/devops-capstone-project'
+build	UNKNOWN STEP	2026-06-11T19:31:19.5841665Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:19.5842044Z Deleting the contents of '/__w/devops-capstone-project/devops-capstone-project'
+build	UNKNOWN STEP	2026-06-11T19:31:19.5842536Z The repository will be downloaded using the GitHub REST API
+build	UNKNOWN STEP	2026-06-11T19:31:19.5843024Z To create a local Git repository instead, add Git 2.18 or higher to the PATH
+build	UNKNOWN STEP	2026-06-11T19:31:19.5843466Z Downloading the archive
+build	UNKNOWN STEP	2026-06-11T19:31:19.8700653Z Writing archive to disk
+build	UNKNOWN STEP	2026-06-11T19:31:19.8724109Z Extracting the archive
+build	UNKNOWN STEP	2026-06-11T19:31:19.8744716Z [command]/usr/bin/tar xz -C /__w/devops-capstone-project/devops-capstone-project/6ede18f2-07bf-484b-9928-394bcffb7c55 -f /__w/devops-capstone-project/devops-capstone-project/6ede18f2-07bf-484b-9928-394bcffb7c55.tar.gz
+build	UNKNOWN STEP	2026-06-11T19:31:19.8824765Z Resolved version ur77ec17235-devops-capstone-project-b2d5c8c
+build	UNKNOWN STEP	2026-06-11T19:31:19.9083386Z ##[group]Run python -m pip install --upgrade pip wheel
+build	UNKNOWN STEP	2026-06-11T19:31:19.9083884Z [36;1mpython -m pip install --upgrade pip wheel[0m
+build	UNKNOWN STEP	2026-06-11T19:31:19.9084246Z [36;1mpip install -r requirements.txt[0m
+build	UNKNOWN STEP	2026-06-11T19:31:19.9087438Z shell: sh -e {0}
+build	UNKNOWN STEP	2026-06-11T19:31:19.9087672Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:21.5250203Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+build	UNKNOWN STEP	2026-06-11T19:31:21.6250158Z Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+build	UNKNOWN STEP	2026-06-11T19:31:21.7193581Z Collecting pip
+build	UNKNOWN STEP	2026-06-11T19:31:21.7407373Z   Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:21.7660141Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 81.4 MB/s eta 0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:21.7779272Z Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.45.1)
+build	UNKNOWN STEP	2026-06-11T19:31:21.8238638Z Collecting wheel
+build	UNKNOWN STEP	2026-06-11T19:31:21.8289681Z   Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:21.8762722Z Collecting packaging>=24.0
+build	UNKNOWN STEP	2026-06-11T19:31:21.8812932Z   Downloading packaging-26.2-py3-none-any.whl (100 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:21.8844597Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 232.6 MB/s eta 0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:21.9401761Z Installing collected packages: pip, packaging, wheel
+build	UNKNOWN STEP	2026-06-11T19:31:21.9402448Z   Attempting uninstall: pip
+build	UNKNOWN STEP	2026-06-11T19:31:21.9408945Z     Found existing installation: pip 23.0.1
+build	UNKNOWN STEP	2026-06-11T19:31:22.1376104Z     Uninstalling pip-23.0.1:
+build	UNKNOWN STEP	2026-06-11T19:31:22.1489412Z       Successfully uninstalled pip-23.0.1
+build	UNKNOWN STEP	2026-06-11T19:31:23.1387620Z   Attempting uninstall: wheel
+build	UNKNOWN STEP	2026-06-11T19:31:23.1392880Z     Found existing installation: wheel 0.45.1
+build	UNKNOWN STEP	2026-06-11T19:31:23.1496727Z     Uninstalling wheel-0.45.1:
+build	UNKNOWN STEP	2026-06-11T19:31:23.1523883Z       Successfully uninstalled wheel-0.45.1
+build	UNKNOWN STEP	2026-06-11T19:31:23.1844038Z Successfully installed packaging-26.2 pip-26.0.1 wheel-0.47.0
+build	UNKNOWN STEP	2026-06-11T19:31:23.1847136Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+build	UNKNOWN STEP	2026-06-11T19:31:23.6118353Z WARNING: The directory '/github/home/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+build	UNKNOWN STEP	2026-06-11T19:31:23.6974294Z Collecting Werkzeug==2.1.2 (from -r requirements.txt (line 2))
+build	UNKNOWN STEP	2026-06-11T19:31:23.7323328Z   Downloading Werkzeug-2.1.2-py3-none-any.whl.metadata (4.4 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.0327827Z Collecting SQLAlchemy==1.4.46 (from -r requirements.txt (line 3))
+build	UNKNOWN STEP	2026-06-11T19:31:24.0383348Z   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.0668951Z Collecting Flask==2.1.2 (from -r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:24.0725795Z   Downloading Flask-2.1.2-py3-none-any.whl.metadata (3.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.0837362Z Collecting Flask-SQLAlchemy==2.5.1 (from -r requirements.txt (line 7))
+build	UNKNOWN STEP	2026-06-11T19:31:24.0880427Z   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl.metadata (3.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.1514152Z Collecting psycopg2-binary==2.9.3 (from -r requirements.txt (line 8))
+build	UNKNOWN STEP	2026-06-11T19:31:24.1605982Z   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.4 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.1723537Z Collecting python-dotenv==0.20.0 (from -r requirements.txt (line 9))
+build	UNKNOWN STEP	2026-06-11T19:31:24.1793510Z   Downloading python_dotenv-0.20.0-py3-none-any.whl.metadata (19 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.2281216Z Collecting gunicorn==20.1.0 (from -r requirements.txt (line 12))
+build	UNKNOWN STEP	2026-06-11T19:31:24.2367656Z   Downloading gunicorn-20.1.0-py3-none-any.whl.metadata (3.8 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.2445804Z Collecting honcho==1.1.0 (from -r requirements.txt (line 13))
+build	UNKNOWN STEP	2026-06-11T19:31:24.2660242Z   Downloading honcho-1.1.0-py2.py3-none-any.whl.metadata (3.4 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.2930920Z Collecting pylint==2.14.0 (from -r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:24.2996973Z   Downloading pylint-2.14.0-py3-none-any.whl.metadata (9.6 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.3163711Z Collecting flake8==4.0.1 (from -r requirements.txt (line 17))
+build	UNKNOWN STEP	2026-06-11T19:31:24.3261374Z   Downloading flake8-4.0.1-py2.py3-none-any.whl.metadata (4.0 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.4012780Z Collecting black==22.3.0 (from -r requirements.txt (line 18))
+build	UNKNOWN STEP	2026-06-11T19:31:24.4084467Z   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (45 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.4199133Z Collecting nose==1.3.7 (from -r requirements.txt (line 21))
+build	UNKNOWN STEP	2026-06-11T19:31:24.4247170Z   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.4337334Z Collecting pinocchio==0.4.3 (from -r requirements.txt (line 22))
+build	UNKNOWN STEP	2026-06-11T19:31:24.4388662Z   Downloading pinocchio-0.4.3-py3-none-any.whl.metadata (975 bytes)
+build	UNKNOWN STEP	2026-06-11T19:31:24.4507985Z Collecting factory-boy==2.12.0 (from -r requirements.txt (line 23))
+build	UNKNOWN STEP	2026-06-11T19:31:24.4574105Z   Downloading factory_boy-2.12.0-py2.py3-none-any.whl.metadata (12 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.9014491Z Collecting coverage==6.3.2 (from -r requirements.txt (line 26))
+build	UNKNOWN STEP	2026-06-11T19:31:24.9084098Z   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:24.9206210Z Collecting httpie==3.2.1 (from -r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:24.9263887Z   Downloading httpie-3.2.1-py3-none-any.whl.metadata (7.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.0705962Z Collecting greenlet!=0.4.17 (from SQLAlchemy==1.4.46->-r requirements.txt (line 3))
+build	UNKNOWN STEP	2026-06-11T19:31:25.0757401Z   Downloading greenlet-3.2.5-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.0911439Z Collecting Jinja2>=3.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:25.0966565Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.1050723Z Collecting itsdangerous>=2.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:25.1113335Z   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.1258174Z Collecting click>=8.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:25.1303361Z   Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.1561962Z Collecting importlib-metadata>=3.6.0 (from Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:25.1612227Z   Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.1761388Z Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 12)) (79.0.1)
+build	UNKNOWN STEP	2026-06-11T19:31:25.2143221Z Collecting dill>=0.2 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.2187902Z   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.2359303Z Collecting platformdirs>=2.2.0 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.2415198Z   Downloading platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.2708167Z Collecting astroid<=2.12.0-dev0,>=2.11.5 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.2766952Z   Downloading astroid-2.11.7-py3-none-any.whl.metadata (4.7 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.3134320Z Collecting isort<6,>=4.2.5 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.3186562Z   Downloading isort-5.13.2-py3-none-any.whl.metadata (12 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.3305866Z Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.3348411Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.3490191Z Collecting tomlkit>=0.10.1 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.3534564Z   Downloading tomlkit-0.15.0-py3-none-any.whl.metadata (2.8 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.3694018Z Collecting typing-extensions>=3.10.0 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.3738363Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.3937161Z Collecting tomli>=1.1.0 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.3987638Z   Downloading tomli-2.4.1-py3-none-any.whl.metadata (10 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4019067Z Collecting mccabe<0.8,>=0.6 (from pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4066087Z   Downloading mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4151598Z Collecting pycodestyle<2.9.0,>=2.8.0 (from flake8==4.0.1->-r requirements.txt (line 17))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4210947Z   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl.metadata (31 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4330616Z Collecting pyflakes<2.5.0,>=2.4.0 (from flake8==4.0.1->-r requirements.txt (line 17))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4380716Z   Downloading pyflakes-2.4.0-py2.py3-none-any.whl.metadata (3.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4533726Z Collecting pathspec>=0.9.0 (from black==22.3.0->-r requirements.txt (line 18))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4575499Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4655194Z Collecting mypy-extensions>=0.4.3 (from black==22.3.0->-r requirements.txt (line 18))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4710561Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.4837927Z Collecting colorama (from pinocchio==0.4.3->-r requirements.txt (line 22))
+build	UNKNOWN STEP	2026-06-11T19:31:25.4886592Z   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.5761622Z Collecting Faker>=0.7.0 (from factory-boy==2.12.0->-r requirements.txt (line 23))
+build	UNKNOWN STEP	2026-06-11T19:31:25.5831896Z   Downloading faker-37.12.0-py3-none-any.whl.metadata (15 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.5871384Z Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 29)) (26.0.1)
+build	UNKNOWN STEP	2026-06-11T19:31:25.7464427Z Collecting charset-normalizer>=2.0.0 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:25.7516044Z   Downloading charset_normalizer-3.4.7-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.7616425Z Collecting defusedxml>=0.6.0 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:25.7729916Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.7949611Z Collecting requests>=2.22.0 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:25.8001601Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.8177898Z Collecting Pygments>=2.5.2 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:25.8224283Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:25.8312326Z Collecting requests-toolbelt>=0.9.1 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:25.8367140Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.0745905Z Collecting multidict>=4.7.0 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.0801885Z   Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.1145520Z Collecting rich>=9.10.0 (from httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.1188168Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.2290385Z Collecting lazy-object-proxy>=1.4.0 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:26.2356690Z   Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.4888984Z Collecting wrapt<2,>=1.11 (from astroid<=2.12.0-dev0,>=2.11.5->pylint==2.14.0->-r requirements.txt (line 16))
+build	UNKNOWN STEP	2026-06-11T19:31:26.4976344Z   Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.5160505Z Collecting tzdata (from Faker>=0.7.0->factory-boy==2.12.0->-r requirements.txt (line 23))
+build	UNKNOWN STEP	2026-06-11T19:31:26.5223913Z   Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.5368275Z Collecting zipp>=3.20 (from importlib-metadata>=3.6.0->Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:26.5424648Z   Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.5956376Z Collecting MarkupSafe>=2.0 (from Jinja2>=3.0->Flask==2.1.2->-r requirements.txt (line 6))
+build	UNKNOWN STEP	2026-06-11T19:31:26.6003523Z   Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.6256991Z Collecting idna<4,>=2.5 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.6298109Z   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.6527600Z Collecting urllib3<3,>=1.21.1 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.6573923Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.6755967Z Collecting certifi>=2017.4.17 (from requests>=2.22.0->requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.6801331Z   Downloading certifi-2026.5.20-py3-none-any.whl.metadata (2.5 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.6960565Z Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]>=2.22.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.7071463Z   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.7212031Z Collecting markdown-it-py>=2.2.0 (from rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.7261960Z   Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.7460157Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=9.10.0->httpie==3.2.1->-r requirements.txt (line 29))
+build	UNKNOWN STEP	2026-06-11T19:31:26.7530427Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.7795077Z Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.8000721Z Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.8372138Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 40.7 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:26.8529905Z Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.8615139Z Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.8684784Z Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9153941Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 70.3 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:26.9217483Z Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9268301Z Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9334474Z Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9420367Z Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9463552Z Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9538755Z Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9610327Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 345.0 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:26.9652053Z Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9711665Z Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9763852Z Downloading factory_boy-2.12.0-py2.py3-none-any.whl (36 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9827005Z Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9887700Z Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:26.9980841Z Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0030923Z Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0076969Z Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0145828Z Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0188633Z Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0252358Z Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0302757Z Downloading charset_normalizer-3.4.7-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (208 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0350876Z Downloading click-8.1.8-py3-none-any.whl (98 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0412647Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0458941Z Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0540285Z Downloading faker-37.12.0-py3-none-any.whl (2.0 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0735603Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 103.8 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:27.0805371Z Downloading greenlet-3.2.5-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0834960Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.5/587.5 kB 592.5 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:27.0880986Z Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0929561Z Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.0976777Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1033551Z Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1078979Z Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1119652Z Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (240 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1164490Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1207568Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1255814Z Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1303908Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1353130Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 419.1 MB/s  0:00:00
+build	UNKNOWN STEP	2026-06-11T19:31:27.1392863Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1439288Z Downloading idna-3.18-py3-none-any.whl (65 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1481445Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1523951Z Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1563895Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1608611Z Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1653244Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1696468Z Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1742704Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1787305Z Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1851316Z Downloading tomlkit-0.15.0-py3-none-any.whl (41 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1896111Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1939886Z Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.1986797Z Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.2057293Z Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+build	UNKNOWN STEP	2026-06-11T19:31:27.3667564Z Installing collected packages: nose, mccabe, honcho, zipp, wrapt, Werkzeug, urllib3, tzdata, typing-extensions, tomlkit, tomli, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, psycopg2-binary, platformdirs, pathspec, mypy-extensions, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, greenlet, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, SQLAlchemy, requests, pinocchio, multidict, markdown-it-py, Jinja2, importlib-metadata, flake8, Faker, black, astroid, rich, requests-toolbelt, pylint, Flask, factory-boy, httpie, Flask-SQLAlchemy
+build	UNKNOWN STEP	2026-06-11T19:31:33.0113455Z 
+build	UNKNOWN STEP	2026-06-11T19:31:33.0209473Z Successfully installed Faker-37.12.0 Flask-2.1.2 Flask-SQLAlchemy-2.5.1 Jinja2-3.1.6 MarkupSafe-3.0.3 PySocks-1.7.1 Pygments-2.20.0 SQLAlchemy-1.4.46 Werkzeug-2.1.2 astroid-2.11.7 black-22.3.0 certifi-2026.5.20 charset-normalizer-3.4.7 click-8.1.8 colorama-0.4.6 coverage-6.3.2 defusedxml-0.7.1 dill-0.4.1 factory-boy-2.12.0 flake8-4.0.1 greenlet-3.2.5 gunicorn-20.1.0 honcho-1.1.0 httpie-3.2.1 idna-3.18 importlib-metadata-8.7.1 isort-5.13.2 itsdangerous-2.2.0 lazy-object-proxy-1.12.0 markdown-it-py-3.0.0 mccabe-0.6.1 mdurl-0.1.2 multidict-6.7.1 mypy-extensions-1.1.0 nose-1.3.7 pathspec-1.1.1 pinocchio-0.4.3 platformdirs-4.4.0 psycopg2-binary-2.9.3 pycodestyle-2.8.0 pyflakes-2.4.0 pylint-2.14.0 python-dotenv-0.20.0 requests-2.32.5 requests-toolbelt-1.0.0 rich-15.0.0 tomli-2.4.1 tomlkit-0.15.0 typing-extensions-4.15.0 tzdata-2026.2 urllib3-2.6.3 wrapt-1.17.3 zipp-3.23.1
+build	UNKNOWN STEP	2026-06-11T19:31:33.0216119Z WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+build	UNKNOWN STEP	2026-06-11T19:31:33.7243936Z ##[group]Run flake8 service --count --select=E9,F63,F7,F82 --show-source --statistics
+build	UNKNOWN STEP	2026-06-11T19:31:33.7244553Z [36;1mflake8 service --count --select=E9,F63,F7,F82 --show-source --statistics[0m
+build	UNKNOWN STEP	2026-06-11T19:31:33.7245094Z [36;1mflake8 service --count --max-complexity=10 --max-line-length=127 --statistics[0m
+build	UNKNOWN STEP	2026-06-11T19:31:33.7245678Z shell: sh -e {0}
+build	UNKNOWN STEP	2026-06-11T19:31:33.7245902Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:34.0504235Z 0
+build	UNKNOWN STEP	2026-06-11T19:31:34.2463140Z 0
+build	UNKNOWN STEP	2026-06-11T19:31:34.2688573Z ##[group]Run nosetests
+build	UNKNOWN STEP	2026-06-11T19:31:34.2689019Z [36;1mnosetests[0m
+build	UNKNOWN STEP	2026-06-11T19:31:34.2689384Z shell: sh -e {0}
+build	UNKNOWN STEP	2026-06-11T19:31:34.2689590Z env:
+build	UNKNOWN STEP	2026-06-11T19:31:34.2690144Z   DATABASE_URI: ***postgres:5432/testdb
+build	UNKNOWN STEP	2026-06-11T19:31:34.2690443Z ##[endgroup]
+build	UNKNOWN STEP	2026-06-11T19:31:35.1349336Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.1349922Z Test Flask CLI Commands
+build	UNKNOWN STEP	2026-06-11T19:31:35.1406434Z [1;32m- It should call the db-create command[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.1407892Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.1408088Z Test application configuration
+build	UNKNOWN STEP	2026-06-11T19:31:35.1421006Z [1;32m- It should build DATABASE_URI when DATABASE_URI is not provided[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.1430524Z [1;32m- It should use DATABASE_URI when it is provided[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.1558136Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.1558684Z Test Cases for Account Model
+build	UNKNOWN STEP	2026-06-11T19:31:35.2042336Z [1;32m- It should return a string representation of an Account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2164445Z [1;32m- It should Create an account and add it to the database[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2189456Z [1;32m- It should Create an Account and assert that it exists[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2271166Z [1;32m- It should Delete an account from the database[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2317906Z [1;32m- It should Deserialize an account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2331752Z [1;32m- It should not Deserialize an account with a KeyError[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2343083Z [1;32m- It should not Deserialize an account with a TypeError[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2428365Z [1;32m- It should Find an Account by name[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2560117Z [1;32m- It should List all Accounts in the database[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2615848Z [1;32m- It should Read an account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2638932Z [1;32m- It should Serialize an account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2716232Z [1;32m- It should Update an account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.2838163Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.2838683Z Account Service Tests
+build	UNKNOWN STEP	2026-06-11T19:31:35.2917509Z [1;32m- It should not Create an Account when sending the wrong data[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3006486Z [1;32m- It should Create a new Account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3103757Z [1;32m- It should Delete an Account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3184493Z [1;32m- It should Read a single Account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3431414Z [1;32m- It should Get a list of Accounts[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3469938Z [1;32m- It should not Read an Account that is not found[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3491591Z [1;32m- It should be healthy[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3511934Z [1;32m- It should get 200_OK from the Home Page[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3538734Z [1;32m- It should Handle Internal Server Error[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3559932Z [1;32m- It should not allow an illegal method call[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3581730Z [1;32m- It should not Create an Account with unsupported media type[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3707430Z [1;32m- It should Update an existing Account[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.3758354Z [1;32m- It should not Update an Account that is not found[1;0m
+build	UNKNOWN STEP	2026-06-11T19:31:35.4050880Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.4051624Z Name                               Stmts   Miss  Cover   Missing
+build	UNKNOWN STEP	2026-06-11T19:31:35.4052208Z ----------------------------------------------------------------
+build	UNKNOWN STEP	2026-06-11T19:31:35.4052783Z service/__init__.py                   18      3    83%   32-35
+build	UNKNOWN STEP	2026-06-11T19:31:35.4053325Z service/common/__init__.py             0      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4053836Z service/common/cli_commands.py         7      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4054353Z service/common/error_handlers.py      32      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4054892Z service/common/log_handlers.py        10      1    90%   21
+build	UNKNOWN STEP	2026-06-11T19:31:35.4055426Z service/common/status.py              46      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4055901Z service/config.py                     11      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4056420Z service/models.py                     69      2    97%   32, 127
+build	UNKNOWN STEP	2026-06-11T19:31:35.4056960Z service/routes.py                     56      0   100%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4058235Z ----------------------------------------------------------------
+build	UNKNOWN STEP	2026-06-11T19:31:35.4058923Z TOTAL                                249      6    98%
+build	UNKNOWN STEP	2026-06-11T19:31:35.4059405Z ----------------------------------------------------------------------
+build	UNKNOWN STEP	2026-06-11T19:31:35.4059874Z Ran 28 tests in 0.743s
+build	UNKNOWN STEP	2026-06-11T19:31:35.4060061Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.4060164Z OK
+build	UNKNOWN STEP	2026-06-11T19:31:35.4060307Z 
+build	UNKNOWN STEP	2026-06-11T19:31:35.5095146Z Post job cleanup.
+build	UNKNOWN STEP	2026-06-11T19:31:35.5102410Z ##[command]/usr/bin/docker exec  34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657 sh -c "cat /etc/*release | grep ^ID"
+build	UNKNOWN STEP	2026-06-11T19:31:35.7254035Z Stop and remove container: 73dc270d3e7f4a4e8aa7a937f829a537_python39slim_1f4351
+build	UNKNOWN STEP	2026-06-11T19:31:35.7258664Z ##[command]/usr/bin/docker rm --force 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:36.2059970Z 34d9c8b31d8420382c293033447c6e0174d20f33b55fb4f25570ecdf22347657
+build	UNKNOWN STEP	2026-06-11T19:31:36.2085004Z Print service container logs: 41e8bcaecdea44e9a8e14d9781e249b5_postgresalpine_491e26
+build	UNKNOWN STEP	2026-06-11T19:31:36.2090071Z ##[command]/usr/bin/docker logs --details 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:36.2225503Z  The files belonging to this database system will be owned by user "postgres".
+build	UNKNOWN STEP	2026-06-11T19:31:36.2228224Z  sh: locale: not found
+build	UNKNOWN STEP	2026-06-11T19:31:36.2228778Z  2026-06-11 19:31:06.851 UTC [40] WARNING:  no usable system locales were found
+build	UNKNOWN STEP	2026-06-11T19:31:36.2229331Z  initdb: warning: enabling "trust" authentication for local connections
+build	UNKNOWN STEP	2026-06-11T19:31:36.2230170Z  initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+build	UNKNOWN STEP	2026-06-11T19:31:36.2231004Z  2026-06-11 19:31:07.689 UTC [1] LOG:  starting PostgreSQL 18.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+build	UNKNOWN STEP	2026-06-11T19:31:36.2231873Z  2026-06-11 19:31:07.689 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+build	UNKNOWN STEP	2026-06-11T19:31:36.2232326Z  2026-06-11 19:31:07.689 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+build	UNKNOWN STEP	2026-06-11T19:31:36.2232845Z  2026-06-11 19:31:07.690 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+build	UNKNOWN STEP	2026-06-11T19:31:36.2233407Z  2026-06-11 19:31:07.694 UTC [68] LOG:  database system was shut down at 2026-06-11 19:31:07 UTC
+build	UNKNOWN STEP	2026-06-11T19:31:36.2233896Z  2026-06-11 19:31:07.697 UTC [1] LOG:  database system is ready to accept connections
+build	UNKNOWN STEP	2026-06-11T19:31:36.2234326Z  2026-06-11 19:31:16.290 UTC [78] FATAL:  role "root" does not exist
+build	UNKNOWN STEP	2026-06-11T19:31:36.2234703Z  2026-06-11 19:31:26.339 UTC [85] FATAL:  role "root" does not exist
+build	UNKNOWN STEP	2026-06-11T19:31:36.2235038Z  This user must also own the server process.
+build	UNKNOWN STEP	2026-06-11T19:31:36.2235314Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2235594Z  The database cluster will be initialized with locale "en_US.utf8".
+build	UNKNOWN STEP	2026-06-11T19:31:36.2236022Z  The default database encoding has accordingly been set to "UTF8".
+build	UNKNOWN STEP	2026-06-11T19:31:36.2236434Z  The default text search configuration will be set to "english".
+build	UNKNOWN STEP	2026-06-11T19:31:36.2236750Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2236942Z  Data page checksums are enabled.
+build	UNKNOWN STEP	2026-06-11T19:31:36.2237185Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2237491Z  fixing permissions on existing directory /var/lib/postgresql/18/docker ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2237894Z  creating subdirectories ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2238205Z  selecting dynamic shared memory implementation ... posix
+build	UNKNOWN STEP	2026-06-11T19:31:36.2238555Z  selecting default "max_connections" ... 100
+build	UNKNOWN STEP	2026-06-11T19:31:36.2238860Z  selecting default "shared_buffers" ... 128MB
+build	UNKNOWN STEP	2026-06-11T19:31:36.2239151Z  selecting default time zone ... UTC
+build	UNKNOWN STEP	2026-06-11T19:31:36.2239420Z  creating configuration files ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2239680Z  running bootstrap script ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2239966Z  performing post-bootstrap initialization ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2240276Z  syncing data to disk ... ok
+build	UNKNOWN STEP	2026-06-11T19:31:36.2240510Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2240680Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2240903Z  Success. You can now start the database server using:
+build	UNKNOWN STEP	2026-06-11T19:31:36.2241464Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2241820Z      pg_ctl -D /var/lib/postgresql/18/docker -l logfile start
+build	UNKNOWN STEP	2026-06-11T19:31:36.2242831Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2243729Z  waiting for server to start....2026-06-11 19:31:07.404 UTC [46] LOG:  starting PostgreSQL 18.4 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+build	UNKNOWN STEP	2026-06-11T19:31:36.2244978Z  2026-06-11 19:31:07.405 UTC [46] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+build	UNKNOWN STEP	2026-06-11T19:31:36.2245862Z  2026-06-11 19:31:07.409 UTC [52] LOG:  database system was shut down at 2026-06-11 19:31:07 UTC
+build	UNKNOWN STEP	2026-06-11T19:31:36.2246971Z  2026-06-11 19:31:07.412 UTC [46] LOG:  database system is ready to accept connections
+build	UNKNOWN STEP	2026-06-11T19:31:36.2247523Z   done
+build	UNKNOWN STEP	2026-06-11T19:31:36.2247784Z  server started
+build	UNKNOWN STEP	2026-06-11T19:31:36.2248071Z  CREATE DATABASE
+build	UNKNOWN STEP	2026-06-11T19:31:36.2248363Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2248615Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2249101Z  /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+build	UNKNOWN STEP	2026-06-11T19:31:36.2249677Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2250191Z  waiting for server to shut down....2026-06-11 19:31:07.565 UTC [46] LOG:  received fast shutdown request
+build	UNKNOWN STEP	2026-06-11T19:31:36.2250999Z  2026-06-11 19:31:07.566 UTC [46] LOG:  aborting any active transactions
+build	UNKNOWN STEP	2026-06-11T19:31:36.2252087Z  2026-06-11 19:31:07.568 UTC [46] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+build	UNKNOWN STEP	2026-06-11T19:31:36.2252941Z  2026-06-11 19:31:07.571 UTC [50] LOG:  shutting down
+build	UNKNOWN STEP	2026-06-11T19:31:36.2253543Z  2026-06-11 19:31:07.572 UTC [50] LOG:  checkpoint starting: shutdown immediate
+build	UNKNOWN STEP	2026-06-11T19:31:36.2255381Z  2026-06-11 19:31:07.588 UTC [50] LOG:  checkpoint complete: wrote 943 buffers (5.8%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.002 s, total=0.018 s; sync files=303, longest=0.001 s, average=0.001 s; distance=4352 kB, estimate=4352 kB; lsn=0/1B9F340, redo lsn=0/1B9F340
+build	UNKNOWN STEP	2026-06-11T19:31:36.2257303Z  2026-06-11 19:31:07.601 UTC [46] LOG:  database system is shut down
+build	UNKNOWN STEP	2026-06-11T19:31:36.2257749Z   done
+build	UNKNOWN STEP	2026-06-11T19:31:36.2257932Z  server stopped
+build	UNKNOWN STEP	2026-06-11T19:31:36.2258139Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2258377Z  PostgreSQL init process complete; ready for start up.
+build	UNKNOWN STEP	2026-06-11T19:31:36.2258669Z  
+build	UNKNOWN STEP	2026-06-11T19:31:36.2263844Z Stop and remove container: 41e8bcaecdea44e9a8e14d9781e249b5_postgresalpine_491e26
+build	UNKNOWN STEP	2026-06-11T19:31:36.2265045Z ##[command]/usr/bin/docker rm --force 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:36.3599719Z 42455032d15b062d247d1bdff1c487175c6d94ac0db0ecd4d1ca76bb11f8a85e
+build	UNKNOWN STEP	2026-06-11T19:31:36.3625523Z Remove container network: github_network_fc1542ada98340acb8e87c45897615a9
+build	UNKNOWN STEP	2026-06-11T19:31:36.3629772Z ##[command]/usr/bin/docker network rm github_network_fc1542ada98340acb8e87c45897615a9
+build	UNKNOWN STEP	2026-06-11T19:31:36.4758557Z github_network_fc1542ada98340acb8e87c45897615a9
+build	UNKNOWN STEP	2026-06-11T19:31:36.4825486Z Cleaning up orphan processes
+build	UNKNOWN STEP	2026-06-11T19:31:36.5160598Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v2. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

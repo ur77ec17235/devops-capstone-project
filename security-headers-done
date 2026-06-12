@@ -1,3 +1,7 @@
+Running Accounts service tests after implementing Flask-Talisman security headers and Flask-Cors CORS policies
+
+nose.config: INFO: Ignoring files matching ['^\\.', '^_', '^setup\\.py$']
+nose.plugins.cover: INFO: Coverage report will include only packages: ['service']
 
 Test Flask CLI Commands
 [1;32m- It should call the db-create command[1;0m
@@ -33,7 +37,7 @@ Account Service Tests
 [1;32m- It should Handle Internal Server Error[1;0m
 [1;32m- It should not allow an illegal method call[1;0m
 [1;32m- It should return security headers[1;0m
-[1;32m- It should not Create an Account with unsupported media type[1;0m
+[1;32m- It should not Create an Account when sending the wrong media type[1;0m
 [1;32m- It should Update an existing Account[1;0m
 [1;32m- It should not Update an Account that is not found[1;0m
 
@@ -51,7 +55,13 @@ service/routes.py                     56      0   100%
 ----------------------------------------------------------------
 TOTAL                                253      6    98%
 ----------------------------------------------------------------------
-Ran 30 tests in 0.671s
+Ran 30 tests in 0.910s
 
 OK
 
+
+Evidence from tests/test_routes.py:
+211:    def test_security_headers(self):
+217:            "X-Frame-Options": "SAMEORIGIN",
+226:    def test_cors_security(self):
+231:        self.assertEqual(response.headers.get("Access-Control-Allow-Origin"), "*")
